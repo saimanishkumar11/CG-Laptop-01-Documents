@@ -1,0 +1,230 @@
+Hello and welcome to this guided project performance testing
+with Jamie to for absolute beginners my name is Sarah Dhingra
+and I will be your instructor for this project.
+I have more than 11 years of working experience into idea,
+software delivery and has worked as a test automation
+and devops consultant in this guided project with hands
+on lab.
+We will cover the following topics first understanding
+performance testing and will set up in moment for the rest
+of the tasks.
+In the second task will introduce you to J meter and its
+components like samplers, convict elements and listeners.
+In the third task will send an http request using Janita,
+then we will define configure limits.
+We're also seeing some more different requests like post
+for pat and delete requests using janitor.
+Then we will add a task to read from C S. V file using CSP
+config element.
+Then we will apply load, will generate load, then we
+will learn how to use some custom plug ins will generate Lord
+or traffic using accustomed thread groups and we will also
+see custom graph listeners in Jamaica.
+Let us now have a brief overview of the rhyme platform on the
+right side panel.
+You'll see my cloud next top and moving my culture right now
+the left big cloud deck stop you see is yours, this is
+a hands on project so please watch what I'm doing and follow
+those steps or instructions on your own cloud.
+Next stop.
+If you need to pause my instruction at any time, please bring
+the cursor on top of my cloud deck stop and click the pause
+button.
+If I'm going too fast or too slow, you can increase
+or decrease the speed of the video by clicking the speed
+button below the past country.
+Let us know.
+Start with understanding why we need performance testing
+for that.
+You can answer some of the questions which are mentioned
+on the screen.
+Like will the customer be happy with the performance of our
+obligation after launch next.
+Will our idea system or infrastructure will be able to handle
+the expected to use a Lord or will it crash?
+How many servers do we need to provision?
+Can our replication process X number of others pair are, How
+much time does it take to process one order?
+How many applications servers do we need to provision to able
+to process X orders.
+Is our application scalable.
+Is our application reliable.
+What is the maximum load that our application can handle?
+How does a replication reacts to sudden spike in the load.
+Will our application auto scale with Lord.
+Do we fail?
+Lower back up and recovery strategies in place.
+Will our application follower as expected.
+What will be the faith recovery time in case of system
+failure.
+An answer to all those questions is performance testing.
+Before we jump onto performance testing.
+We should also understand performance engineering.
+The process of building software application.
+Considering the non functional aspects like speed.
+Throughput scalability, reliability availability is called.
+Performance engineering.
+Performance engineering principle should be considered
+and used throughout software development cycle.
+Not in just performance testing cycle.
+So what is performance testing the process of testing
+software applications to validate the non functional aspects
+like speed.
+Throughput scalability, reliability availability is called
+performance testing.
+Performance issues can come in any layer of software stacks
+like operating system, network disk, front end layer, back
+and layer or database layer.
+Performance issues can come up because of poorly written
+court improper configuration limitations with the tech stack
+chosen or due to product design or architecture.
+Let us now discuss some of the performance testing type.
+So first is Lord testing, what is Lord testing testing
+the stability and response time of an application by applying
+a load which is equal to or less than the desired number
+of users is low testing.
+Second this stress testing which is testing the stability
+and response time of an application by applying load which is
+more than the number of desired users.
+Where we test how exactly the application will crash when
+we apply load, which is more than what your application
+can handle them.
+Next is spike testing.
+Spike testing is when we increase the load for just a small
+duration of time forming spikes.
+Say for example, if your application can withhold 100 users
+and suddenly for maybe one minute we apply A lot
+of 1000 users.
+So this forms a spike and how the application will behave
+when the traffic suddenly increase or shoot up and how
+the application will cool down.
+Or you can say recover when this traffic reduces endurance
+testing is testing the stability and response time
+of an application.
+By applying Lord for a continuous amount of time.
+Here we are more focused on how the application will behave
+when the traffic is high for a long duration of time.
+Next we have is the scalability testing scalability
+testing is where we test that on increasing the traffic, how
+your application or those skills.
+Next we have is volume testing testing the stability
+and response time of an application by transferring the huge
+amount of data is what volume testing is.
+So these were some of the performance testing type.
+Next we'll talk about some of the performance testing terms
+which are used commonly in an industry.
+So the first time is virtual user or the user.
+When we are doing performance testing, we need a lot of users
+to do some activities or on our application.
+Now we cannot ask thousands of users to perform
+some operation or an application simultaneously.
+So we need some way to generate this traffic.
+And that's when we use some automation tools like Jamie
+to Lord Runner to generate these many users.
+Those users, we call as virtual users or the users,
+they are programmed to perform some operation on our
+application.
+And next is response time.
+So response time measures the performance of an individual
+transaction or a query response time is the amount of time
+from the moment that a user sends a request until the time
+that the application indicates that the
+request has completed is what response time is Next is
+response time person dials like 90th%ile, So a percentile is
+a measure used in statistics indicating that the value
+below which a given percentage of observations in a group
+or of observations fall.
+For example, the response time for an extra to be request
+below which 90% of the request Response time value
+lies is called 90th%ile.
+Next is throughput.
+Throughput can simply be defined as work done per unit time.
+For example, Throughput of Observer can be measured as pages
+per second.
+Throughput of an application can be measured as transaction
+per second.
+Throughput of a DB server can be measured as SQL queries
+per second.
+Next is peak load or peak load testing is placing a Lord
+on the server for a short time to emulate the heaviest demand
+that would be generated at the peak user time for example,
+credit card verification between noon and one p.m.
+On christmas eve.
+Next we have is a bottleneck.
+Bottleneck refers to both an overloaded network and the state
+of a computing device in which one component is unable
+to keep pace with the rest of the system.
+Thus slowing down overall performance.
+Next we have is correlation.
+So correlation is where we before sending the second request
+we need some information from the first request.
+Like to do something on a web application, you need
+an authentication token.
+So first we will send a request to generate
+the authentication token and we'll pass in the subsequent
+request.
+That's what correlation means.
+Next we have is think time.
+Think time is the time taken between two subsequent requests.
+Like if I'm doing an entering transactions say I'm doing
+a payment transaction and before entering my card it is
+I'm thinking for some time to press the next button is what
+I think time is whereas pacing time or place time is the time
+taken between two business transaction.
+So for example if I'm on an e commerce website and I want
+to purchase two different products so I'll complete my first
+product transaction and then I'll wait for some time.
+Then we'll search my next product and will do or the payment
+of the second product.
+The difference or the time taken in between these
+two business transaction is known as pacing time
+in performance testing results.
+Let us now set up the lab for the testing.
+So I have a sample application installed on this virtual
+machine as well as J meter already installed and set up
+on this machine.
+The first thing I request you all to do is go to this visual
+studio code double click connect this will take some time so
+I'll pause my video to keep the video short.
+So here the visual studio is open Now.
+Inhale in the workspace hyphens here.
+There is a project with name not express.
+So this is their application.
+We're going to test so to make the application up and running,
+I request you to go inside this application by performing
+city space the name of the application just type some image
+initials and pressed up presenter.
+We are inside this application and then you only need to
+write what command called Npm space start and press enter
+This will start the application and you can access it on
+local host colon 3004 number.
+Allah gil pause my video to for this application to set up so
+the application is up and running now you can just go to the
+browser And just say local host calling 3000 and here is the
+sample application which we're going to test.
+I'll talk more about the application and upcoming task.
+I'll minimize this and will also minimize this.
+Which will studio code keep that application up and running.
+Next go to there's another folder called a package a meter.
+So go inside this folder and in this folder go to pin and
+then biden.
+You will see there is a Jamie did her back So just double
+click on that to open the janitor.
+So again it will take sometimes I'll pause my video tell the
+janitor opens up so the janitor is opened up.
+You can access it by just clicking on Jamie to here.
+Just click on expand and this is the Jamie tile which is open
+now we will open one of the G M x which I already have
+created, so go to file, go to open recent and then click on
+performance testing dot G M X.
+There is nothing inside this, but we have saved this
+application and I have edited into one get her repository.
+So I'll be uploading this Gemex there.
+So here you can go to get report dot txt to get the link of
+the Git hub repository where this application will be or
+where this DMX will be uploaded.
+That's all in this first Trask where we discussed about some
+performing performance testing types and terms.
+And we also set up our application for testing in the next
+task will look into some of the components of jupiter.
+Thank you.

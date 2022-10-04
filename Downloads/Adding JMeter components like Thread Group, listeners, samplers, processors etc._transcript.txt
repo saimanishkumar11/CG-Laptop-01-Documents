@@ -1,0 +1,144 @@
+Hello and welcome to the next task that is adding Jamie.
+The components to the script.
+There are a lot of components Janita provides like thread
+groups, samplers config elements, listeners, assertions,
+timers.
+Pre processors and post processors in this task?
+We will cover some of these components.
+Let's start with the first one which is a threat groups.
+So for adding a thread group we can just right click on this?
+S plan, go to add producer and click on trade group
+by default.
+It shows us only these three trade groups which are thread
+groups set up thread group and deer down thread group you
+can add some more thread groups by using some external plug
+ins. Let us start with this 1/1.
+So what is a thread group thread groups is a collection
+of threats.
+Each thread represent one user using the application.
+No test Basically each threat simulates one real user request
+to the server.
+The control for a trade group allow you to set the number
+of threats for each group.
+For example, here you can see when I go to thread group here,
+I have a number of threats which I can set right now.
+It is one which means this will send one single user Rambo
+period is one that means in one second it will send this user
+Say for example if now I increase the number of users
+200 Then.
+And I said Rambo period and has saved 50.
+That means in 50 seconds.
+These 100 users will become active.
+So if I reduce this to 10, that means these 100 users
+will get active in 10 seconds.
+That means every 2nd.
+10 new users will send a request to application under test.
+Now how many requests you want?
+Your users to send is what luke count is.
+So you can set it to a fixed number of requests or you
+can change it to infinite.
+Now when you are specifying it to infinite, you can also
+define for how much time do you want to send the infinite
+number of requests?
+So for example I want to run my traffic only for say
+100 seconds.
+Then I can enable this setting here and put 100.
+Now, this means 400 seconds.
+100 users will send the request continuously and every
+10 seconds one user will be added.
+So these are the some of the configurations which you
+can define a third group level for now.
+I'll disable both these configurations and will make
+these values as one will generate the traffic later in later
+tasks. So this is all about the threat group.
+Inside the thread group we will add one sampler.
+Say I start with an http request.
+If you again check.
+This list of sampler is huge.
+It has all these samplers like s http request.
+Debug sampler.
+J S R two double double 23 sampler and so on this.
+There is a long list of samplers.
+So what does this sampler?
+So J Peter supports testing off the G d p f D p G D b C
+and many other protocols now.
+Trade groups, simulate user's request to the server, but how
+a thread group know which type of request it has to send.
+So it assembler is the type of request which a user will say.
+So if I'm saying I want to add an http request, that means
+I'll be sending an http request.
+So that's what a sampler is.
+We'll look into how to send these requests in upcoming task.
+Next we have a listener listener is kind of, You
+can say let's see here.
+I add this listener called view reserved three.
+Now what is a listener?
+So listener shows the results of the test execution.
+They can show results in a different format, such as
+three table graph or log file.
+Right now, I just have added one which generates the, you
+can see the results in a tree from it.
+Similarly, you can add more like a listener which generates
+a summary report or you have aggregated reports and so on.
+You can see in summary report, it will generate the report
+in form of a table.
+Again, we'll look into these reports and upcoming tasks.
+Next I have is some configuration elements.
+So there are a lot of config elements which are, which you
+can add again.
+Right click add, go to config element.
+Like when you want to read data from CSP, you cannot see
+sweetie dessert.
+When you want to define some Meadows for all your requests.
+You can define http header manager when you want to set
+some cookie.
+You can define cookie manager when you want to set some cash.
+You can define http cache manager when you want to define
+some default values for your requests.
+You can define http request defaults and there are many other
+conflict elements or configurations which you can defy.
+So for now we will start with the first one which is user
+defined variables.
+I'll just scroll it to the top.
+Usually in user defined variables, you can define all your
+variables.
+Say for example I'll add her my first user or sorry, my first
+variable.
+Say I call it host.
+Me and my host name is local host because I want to test my
+application on local host.
+Let me also increase this foreign size.
+So go to options and zoom in.
+You can increase the fun size if you want to do it at your
+Jamie there as well.
+So here it is better know.
+Right. So I've added one variable called Hosni which is local
+host. You can define another variable.
+Say board number And let's say the value of the 4th number is
+3000. So I will find it like this.
+We'll see how we can access these variables in samplers
+in the upcoming tasks.
+So other components we have is we have assertions which you
+can add to the samplers.
+So when you right click on a sampler and say add desertion.
+You have response assertion.
+So when you want to do some exertion on the response,
+they want to verify that the status code is
+200 or a particular value is present or not.
+Or you want to verify the value of a particular some key
+in the response.
+You can use the response desertion When you want to get
+these keys through adjacent, you can use Jason desertion
+to do that.
+Then we have sizes Asian to verify the size of the response
+and some advance assertions like GSR, 2-3 expert exertion
+and so on.
+Right now I'll just add this response is ocean and we'll see
+how you can add or what all you can do with this response
+inversion in upcoming tasks.
+That's all in this task where we learned.
+What are the different components which are available
+in Jamaica will use all these components in our upcoming task.
+Thank you.
+In the next task we will send our first http request.
+Thank you.
